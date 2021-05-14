@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@800&display=swap" rel="stylesheet">
+    <title>じゃんけん</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="wrap_img">
+    
+            <header>
+                <h1 class="title">ラーメン じゃんけん</h1>
+            </header>
+     
+            <div class="mainvisual">
+                <img src="img/ramen_main.jpg" alt="">
+                <div class="gu_image">
+                    <img id="gu_btn" src="img/gu.png" alt="">
+                </div>
+                <div class="cho_image">
+                    <img id="cho_btn" src="img/choki.png" alt="">
+                </div>
+                <div class="par_image">
+                    <img id="par_btn" src="img/par.png" alt="">
+                </div>
+                <div class="pc">
+                    <span id="pc_hands"></span>
+                </div>
+                <div class="jud_win">
+                    <span id="judgment_win"></span>
+                </div>
+                <div class="jud_wood">
+                    <span id="judgment"></span>
+                </div>
+                <p1>あなた</p1>
+                <p2>相手</p2>
+            </div>    
+            </div>
+        </div>
+    </div>
+    
+
+    <footer>Copyright (c) Tatsuya Anno All Rights Reserved.</footer>
+
+    <script>
+        window.onload = function() {
+            funcAdd1();
+            funcAdd2();
+            funcAdd3();
+        }
+        function funcAdd1(){
+            var my_audio = new Audio("img/start_gu.wav");
+            document.getElementById("gu_btn").onclick = function() {
+                my_audio.currentTime = 0;
+                my_audio.play();
+            }
+        }
+        function funcAdd2(){
+            var my_audio = new Audio("img/start_choki.wav");
+            document.getElementById("cho_btn").onclick = function() {
+                my_audio.currentTime = 0;
+                my_audio.play();
+            }
+        }
+        function funcAdd3(){
+            var my_audio = new Audio("img/start_par.wav");
+            document.getElementById("par_btn").onclick = function() {
+                my_audio.currentTime = 0;
+                my_audio.play();
+            }
+        }
+
+        // グー
+        $("#gu_btn").on("click",function(){
+        
+        const r =Math.ceil(Math.random()*3);
+
+        let view ="";
+        if(r==1){
+            view = '<img src="img/gu.png" width="150px">'
+        }
+        if(r==2){
+            view = '<img src="img/choki.png" width="150px">'
+        }
+        if(r==3){
+            view = '<img src="img/par.png" width="150px">'
+        }
+        $("#pc_hands").html(view);
+        let jud ="";
+        if(r==1){
+            jud = '<img src="img/draw_wood.png" width="100px">'
+        }
+        if(r==2){
+            jud = '<img src="img/win_wood.png" width="100px">'
+        }
+        if(r==3){
+            jud = '<img src="img/lose_wood.png" width="100px">'
+        }
+        $("#judgment").html(jud);
+
+        let jud_win ="";
+        if(r==2){
+            jud_win = '<img src="img/kanpai.png">'
+        }
+        $("#judgment_win").html(jud_win);
+        });
+
+        // チョキ
+        $("#cho_btn").on("click",function(){
+        
+        const r =Math.ceil(Math.random()*3);
+
+        let view ="";
+        if(r==1){
+            view = '<img src="img/gu.png" width="150px">'
+        }
+        if(r==2){
+            view = '<img src="img/choki.png" width="150px">'
+        }
+        if(r==3){
+            view = '<img src="img/par.png" width="150px">'
+        }
+        $("#pc_hands").html(view);
+        let jud ="";
+        if(r==1){
+            jud = '<img src="img/lose_wood.png" width="100px">'
+        }
+        if(r==2){
+            jud = '<img src="img/draw_wood.png" width="100px">'
+        }
+        if(r==3){
+            jud = '<img src="img/win_wood.png" width="100px">'
+        }
+        $("#judgment").html(jud);
+        let jud_win ="";
+        if(r==3){
+            jud_win = '<img src="img/kanpai.png">'
+        }
+        $("#judgment_win").html(jud_win);
+        });
+       
+        // パー
+        $("#par_btn").on("click",function(){
+        
+        const r =Math.ceil(Math.random()*3);
+
+        let view ="";
+        if(r==1){
+            view = '<img src="img/gu.png" width="150px">'
+        }
+        if(r==2){
+            view = '<img src="img/choki.png" width="150px">'
+        }
+        if(r==3){
+            view = '<img src="img/par.png" width="150px">'
+        }
+        $("#pc_hands").html(view);
+        let jud ="";
+        if(r==1){
+            jud = '<img src="img/win_wood.png" width="100px">'
+        }
+        if(r==2){
+            jud = '<img src="img/lose_wood.png" width="100px">'
+        }
+        if(r==3){
+            jud = '<img src="img/draw_wood.png" width="100px">'
+        }
+        $("#judgment").html(jud);
+        let jud_win ="";
+        if(r==1){
+            jud_win = '<img src="img/kanpai.png">'
+        }
+        $("#judgment_win").html(jud_win);
+        });
+
+        judgment.style.color="red"
+        judgment.style.fontSize="40px"
+    </script>
+</body>
+</html>

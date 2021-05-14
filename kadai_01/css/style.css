@@ -1,0 +1,99 @@
+.html{
+    font-size: 62.5%;
+}
+
+body{
+    color: #333;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+.wrap{
+    margin: 0 auto;
+}
+
+.title{
+    font-size: 5.0rem;
+    font-family: 'Shippori Mincho B1', serif;
+    margin: 20px 0 40px;
+    color: #333;
+}
+.mainvisual{
+    width: 960px;
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+.gu_image{
+    position: absolute;
+    width: 150px;
+    top: 90px;
+    left: 30px;
+}
+
+.cho_image{
+    position: absolute;
+    width: 150px;
+    top: 270px;
+    left: 30px;
+}
+
+.par_image{
+    position: absolute;
+    width: 150px;
+    top: 450px;
+    left: 30px;
+}
+.mainvisual p1{
+    position: absolute;
+    font-family: 'Shippori Mincho B1', serif;
+    color: #fff;
+    font-size: 2.8rem;
+    font-weight: bold;
+    top: 25px;
+    left: 35px;
+}
+.mainvisual p2{
+    position: absolute;
+    font-family: 'Shippori Mincho B1', serif;
+    color: #fff;
+    font-size: 2.8rem;
+    font-weight: bold;
+    top: 25px;
+    left: 810px;
+}
+
+.pc{
+    position: absolute;
+    top: 90px;
+    left: 780px;
+}
+.jud_wood{
+    
+    position: absolute;
+    top: 360px;
+    left: 810px;
+}
+
+.jud_win{
+    position: absolute;
+    width: 562.56px;
+    top: 0px;
+    left: 198px;
+    
+}
+.gu_image:hover{
+    transform:scale(1.2,1.2);
+}
+.cho_image:hover{
+    transform:scale(1.2,1.2);
+}
+.par_image:hover{
+    transform:scale(1.2,1.2);
+}
+
